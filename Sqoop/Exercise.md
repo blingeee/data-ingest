@@ -24,7 +24,7 @@ $ sqoop eval --connect  jdbc:mysql://localhost/loudacre --username training --pa
 ```
 
 ```
- sqoop import --table accounts --connect  jdbc:mysql://localhost/loudacre --username training --password training --columns "acct_num, first_name, last_name" --target-dir /loudacre/accounts/user_info --fields-terminated-by "\t"
+ $ sqoop import --table accounts --connect  jdbc:mysql://localhost/loudacre --username training --password training --columns "acct_num, first_name, last_name" --target-dir /loudacre/accounts/user_info --fields-terminated-by "\t"
 ```
 
 # 2. This	time	save	the	same	in	parquet	format	with	snappy	compression.		Save	it	in	/loudacre/accounts/user_compressed.		Provide.a	screenshot	of	HUE	with	the	new	directory created.

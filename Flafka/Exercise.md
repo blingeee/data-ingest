@@ -3,4 +3,5 @@
 
 
 # 4.~ 10.
+## Kafka Producer,Consumer 같이 캡쳐하였습니다.
 <img width="886" alt="kafka-producer-consumer" src="https://user-images.githubusercontent.com/16662143/55778066-dc7d1280-5adc-11e9-8917-f10d2a263e92.png">

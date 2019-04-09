@@ -33,5 +33,6 @@ $ flume-ng agent --conf /etc/flume-ng/conf --conf-file $DEVSH/exercises/flume/ne
 ```
 $ telnet localhost 44444
 ```
-<img width="966" alt="result" src="https://user-images.githubusercontent.com/16662143/55769154-b0509a00-5aba-11e9-9cdb-aeeee8a94bf7.png">
 <img width="747" alt="telnet" src="https://user-images.githubusercontent.com/16662143/55769166-b8a8d500-5aba-11e9-8d74-55616f448e5c.png">
+
+<img width="966" alt="result" src="https://user-images.githubusercontent.com/16662143/55769154-b0509a00-5aba-11e9-9cdb-aeeee8a94bf7.png">

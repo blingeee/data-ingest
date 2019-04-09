@@ -27,11 +27,14 @@ $ sqoop eval --connect  jdbc:mysql://localhost/loudacre --username training --pa
  $ sqoop import --table accounts --connect  jdbc:mysql://localhost/loudacre --username training --password training --columns "acct_num, first_name, last_name" --target-dir /loudacre/accounts/user_info --fields-terminated-by "\t"
 ```
 
+<img width="1134" alt="Provide user_info" src="https://user-images.githubusercontent.com/16662143/55780699-8bbce800-5ae3-11e9-81ac-227515064949.png">
+
 # 2. This	time	save	the	same	in	parquet	format	with	snappy	compression.		Save	it	in	/loudacre/accounts/user_compressed.		Provide.a	screenshot	of	HUE	with	the	new	directory created.
 
 ```
 $ sqoop import --table accounts --connect  jdbc:mysql://localhost/loudacre --username training --password training --columns "acct_num, first_name, last_name" --target-dir /loudacre/accounts/user_compressed --fields-terminated-by "\t" --compression-codec org.apache.hadoop.io.compress.SnappyCodec --as-parquetfile
 ```
+<img width="1142" alt="Provide user_compressed" src="https://user-images.githubusercontent.com/16662143/55780700-8c557e80-5ae3-11e9-9cba-b9a788f2c417.png">
 
 # 3. Finally	save	in	/loudacre/accounts/CA	only	clients	whose	state	is	from	California.		Save	the	file in	avro format	and	compressed	using	snappy.		From	the	terminal,	display	some	of	the	records	that	you	just	imported.		Take	a	screenshot	and	save	it	as	CA_only.
 
@@ -63,3 +66,5 @@ $ avro-tools tojson hdfs://localhost/loudacre/accounts/CA/part-m-00000.avro
 {"acct_num":{"int":10189},"acct_create_dt":{"long":1269177174000},"acct_close_dt":null,"first_name":{"string":"Ken"},"last_name":{"string":"Lee"},"address":{"string":"1501 Juniper Drive"},"city":{"string":"Eureka"},"state":{"string":"CA"},"zipcode":{"string":"95589"},"phone_number":{"string":"7078812040"},"created":{"long":1395174606000},"modified":{"long":1395174606000}}
 
 ```
+
+<img width="1139" alt="Provide CA" src="https://user-images.githubusercontent.com/16662143/55780698-8bbce800-5ae3-11e9-9898-bb4311c14df5.png">

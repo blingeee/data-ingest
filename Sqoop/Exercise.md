@@ -1,6 +1,6 @@
 # 1. From	the	accounts	table,	import	only	the	primary	key,	along	with	the	first	name,	last	name	to	HDFS	directory /loudacre/accounts/user_info.		Please	save	the	file	in	text	format	with	tab	delimiters.
 
-```
+```run.sh
 $ sqoop eval --connect  jdbc:mysql://localhost/loudacre --username training --password training --query "describe loudacre.accounts"
 19/04/07 23:22:07 INFO sqoop.Sqoop: Running Sqoop version: 1.4.6-cdh5.7.0
 19/04/07 23:22:07 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
